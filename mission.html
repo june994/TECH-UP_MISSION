@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kt cloud TECH UP - 합격자 미션 가이드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="stars"></div>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://www.genspark.ai/api/files/s/AZaLgaWX" alt="kt cloud" class="logo">
+            </div>
+            <h1 class="hero-welcome" id="welcomeMessage">환영합니다! 🎉</h1>
+            <p class="hero-course" id="courseMessage">kt cloud TECH UP</p>
+            <p class="hero-description">수강 시작 전 완료해야 할 미션을 안내해드립니다.<br>각 미션을 순서대로 완료해주세요.</p>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Mission Cards -->
+    <section class="missions">
+        <div class="container">
+            <h2 class="section-title">미션 가이드</h2>
+            
+            <!-- Mission 1 -->
+            <div class="mission-card" data-mission="1">
+                <div class="mission-number">MISSION 01</div>
+                <div class="mission-content">
+                    <div class="mission-image arcade-embed">
+                        <div style="position: relative; padding-bottom: calc(47.4479% + 41px); height: 0px; width: 100%;">
+                            <iframe src="https://demo.arcade.software/c80hzwhkonloC6SUzn3E?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true" title="고용24에서 직업능력개발 훈련과정을 검색하고 수강신청 시작하기" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;"></iframe>
+                        </div>
+                    </div>
+                    <p class="arcade-tip">💡 Tip) 화살표 혹은 원을 클릭해보세요!</p>
+                    <div class="mission-info">
+                        <h3 class="mission-title">국민내일배움카드 & 고용24 수강신청</h3>
+                        <p class="mission-description">
+                            해당 교육을 듣기 위해서는 국민내일배움카드 발급과 고용24에서 수강신청이 필요합니다.
+                        </p>
+                        <div class="mission-steps">
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>국민내일배움카드 발급 (미발급시)</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>고용24 접속 및 로그인</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>kt cloud TECH UP 과정 검색</span>
+                            </div>
+                            <div class="step step-detail">
+                                <span class="pin-icon">📍</span>
+                                <span><strong>How to.</strong> [직업 능력 개발] → [훈련 찾기·신청]을 클릭 → 검색어: kt cloud / 개강일자: <span id="startDate">2026-03-17</span> → 합격하신 과정 클릭</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>수강신청 완료</span>
+                            </div>
+                        </div>
+                        <div class="mission-links">
+                            <a href="https://www.hrd.go.kr" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> HRD-Net 바로가기
+                            </a>
+                            <a id="hrdCourseLink" href="#" target="_blank" class="btn btn-secondary">
+                                <i class="fas fa-external-link-alt"></i> 내 과정 바로가기
+                            </a>
+                        </div>
+                        <button class="mission-complete-btn" id="btn-mission1" onclick="toggleMission('mission1')">
+                            <i class="fas fa-check"></i> 미션 완료
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 2 -->
+            <div class="mission-card" data-mission="2">
+                <div class="mission-number">MISSION 02</div>
+                <div class="mission-content">
+                    <div class="mission-image arcade-embed">
+                        <div style="position: relative; padding-bottom: calc(47.3904% + 41px); height: 0px; width: 100%;">
+                            <iframe src="https://demo.arcade.software/tYXoy14qmNdRc3dcaTq3?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true" title="Untitled (Wed Feb 04 2026)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;"></iframe>
+                        </div>
+                    </div>
+                    <p class="arcade-tip">💡 Tip) 화살표 혹은 원을 클릭해보세요!</p>
+                    <div class="mission-info">
+                        <h3 class="mission-title">디스코드 가입하기</h3>
+                        <p class="mission-description">
+                            kt cloud TECH UP에서는 디스코드를 통해서 소통하고 있어요.<br>
+                            앞으로 공지와 과정별 소통을 위해서 디스코드 계정을 만들어주세요.
+                        </p>
+                        <div class="mission-steps">
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>디스코드 앱 다운로드 또는 웹 접속</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>초대링크 주소창 입력하기</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>초대 링크로 서버 입장</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>프로필 설정: 이름(과정명 2회차)</span>
+                            </div>
+                            <div class="step step-detail">
+                                <span class="pin-icon">📍</span>
+                                <span><strong>예시)</strong> 김테크(풀스택 2회차)</span>
+                            </div>
+                        </div>
+                        <div class="mission-links">
+                            <a href="https://discord.com" target="_blank" class="btn btn-primary">
+                                <i class="fab fa-discord"></i> 디스코드 바로가기
+                            </a>
+                            <button class="btn btn-secondary" onclick="alert('디스코드 초대 링크는 합격 안내 메일을 확인해주세요!')">
+                                <i class="fas fa-link"></i> 초대 링크 받기
+                            </button>
+                        </div>
+                        <button class="mission-complete-btn" id="btn-mission2" onclick="toggleMission('mission2')">
+                            <i class="fas fa-check"></i> 미션 완료
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 3 -->
+            <div class="mission-card" data-mission="3">
+                <div class="mission-number">MISSION 03</div>
+                <div class="mission-content">
+                    <div class="mission-image arcade-embed">
+                        <div style="position: relative; padding-bottom: calc(47.5444% + 41px); height: 0px; width: 100%;">
+                            <iframe src="https://demo.arcade.software/0ViTxrIFbjD9mmXbd2kc?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true" title="ZEP 가입 및 입장" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;"></iframe>
+                        </div>
+                    </div>
+                    <p class="arcade-tip">💡 Tip) 화살표 혹은 원을 클릭해보세요!</p>
+                    <div class="mission-info">
+                        <h3 class="mission-title">ZEP 가입 및 입장하기</h3>
+                        <p class="mission-description">
+                            메타버스 강의실 ZEP에 입장하여 새로운 학습 경험을 시작하세요.
+                        </p>
+                        <div class="mission-steps">
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>ZEP 회원가입 (이메일 또는 소셜 로그인)</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>프로필 아바타 설정</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>강의실 링크로 입장</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>기본 조작법 익히기</span>
+                            </div>
+                        </div>
+                        <div class="mission-links">
+                            <a href="https://zep.us" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> ZEP 바로가기
+                            </a>
+                            <button class="btn btn-secondary" onclick="alert('ZEP 강의실 링크는 합격 안내 메일을 확인해주세요!')">
+                                <i class="fas fa-door-open"></i> 강의실 입장
+                            </button>
+                        </div>
+                        <button class="mission-complete-btn" id="btn-mission3" onclick="toggleMission('mission3')">
+                            <i class="fas fa-check"></i> 미션 완료
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 4 -->
+            <div class="mission-card" data-mission="4">
+                <div class="mission-number">MISSION 04</div>
+                <div class="mission-content">
+                    <div class="mission-image">
+                        <img src="https://www.genspark.ai/api/files/s/iUZPBHDn" alt="Mission 4">
+                    </div>
+                    <div class="mission-info">
+                        <h3 class="mission-title">구름EDU 가입 및 과정별 강좌 입장하기</h3>
+                        <p class="mission-description">
+                            온라인 학습 플랫폼 구름EDU에서 강좌에 등록하고 학습을 시작하세요.
+                        </p>
+                        <div class="mission-steps">
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>구름EDU 회원가입</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>kt cloud TECH UP 과정 검색</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>수강 신청 코드 입력</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>강좌 입장 및 학습 시작</span>
+                            </div>
+                        </div>
+                        <div class="mission-links">
+                            <a href="https://edu.goorm.io" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> 구름EDU 바로가기
+                            </a>
+                            <button class="btn btn-secondary" onclick="alert('수강 신청 코드는 합격 안내 메일을 확인해주세요!')">
+                                <i class="fas fa-key"></i> 수강 코드 확인
+                            </button>
+                        </div>
+                        <button class="mission-complete-btn" id="btn-mission4" onclick="toggleMission('mission4')">
+                            <i class="fas fa-check"></i> 미션 완료
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Completion Section -->
+    <section class="completion" id="completionSection">
+        <div class="container">
+            <div class="completion-content">
+                <div class="completion-icon">🎉</div>
+                <h2>모든 미션을 완료했습니다!</h2>
+                <p>이제 kt cloud TECH UP 과정을 시작할 준비가 되었습니다.</p>
+                <p class="completion-message">함께 성장하는 여정을 응원합니다! 🚀</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 kt cloud TECH UP. All rights reserved.</p>
+            <p>문의사항이 있으시면 합격 안내 메일에 기재된 연락처로 문의해주세요.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kt cloud TECH UP - 시작하기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/start.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="stars"></div>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://www.genspark.ai/api/files/s/AZaLgaWX" alt="kt cloud" class="logo">
+            </div>
+            <h1 class="hero-title">🎉 합격을 축하드립니다!</h1>
+            <p class="hero-description">kt cloud TECH UP 과정을 시작하기 전,<br>먼저 정보를 입력해주세요.</p>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-card">
+                <h2 class="form-title">환영합니다! 👋</h2>
+                <p class="form-subtitle">수강생 정보를 입력하시면 맞춤형 미션 가이드를 제공해드립니다.</p>
+                
+                <form id="studentForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="studentName">
+                            <i class="fas fa-user"></i> 이름
+                        </label>
+                        <input 
+                            type="text" 
+                            id="studentName" 
+                            name="studentName" 
+                            placeholder="이름을 입력해주세요"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="courseSelect">
+                            <i class="fas fa-graduation-cap"></i> 합격 과정
+                        </label>
+                        <select id="courseSelect" name="courseSelect" required>
+                            <option value="">과정을 선택해주세요</option>
+                            <option value="product-design">프로덕트 디자인</option>
+                            <option value="product-management">프로덕트 매니지먼트</option>
+                            <option value="cloud-native">클라우드 네이티브</option>
+                            <option value="cloud-infra">클라우드 인프라</option>
+                            <option value="cyber-security">사이버 보안</option>
+                            <option value="generative-ai">생성형 AI</option>
+                            <option value="frontend">프론트엔드</option>
+                            <option value="fullstack">풀스택</option>
+                            <option value="backend">백엔드</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-rocket"></i> 미션 시작하기
+                    </button>
+                </form>
+
+                <div class="info-box">
+                    <span style="font-size: 1.5rem;">📍</span>
+                    <p>입력하신 정보는 브라우저에만 저장되며, 외부로 전송되지 않습니다.</p>
+                </div>
+            </div>
+
+            <!-- Course Cards -->
+            <div class="courses-grid">
+                <h3 class="courses-title">kt cloud TECH UP 과정 안내</h3>
+                
+                <div class="course-card">
+                    <div class="course-icon">🎨</div>
+                    <h4>프로덕트 디자인</h4>
+                    <p>UX/UI 디자인 전문가 양성</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">📊</div>
+                    <h4>프로덕트 매니지먼트</h4>
+                    <p>제품 기획 및 관리 전문가 양성</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">☁️</div>
+                    <h4>클라우드 네이티브</h4>
+                    <p>클라우드 네이티브 개발 전문가 양성</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🖥️</div>
+                    <h4>클라우드 인프라</h4>
+                    <p>클라우드 인프라 구축 전문가 양성</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🔒</div>
+                    <h4>사이버 보안</h4>
+                    <p>정보보안 전문가 양성</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🤖</div>
+                    <h4>생성형 AI</h4>
+                    <p>AI 서비스 개발 전문가 양성</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">💻</div>
+                    <h4>프론트엔드</h4>
+                    <p>프론트엔드 개발 전문가 양성</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">⚡</div>
+                    <h4>풀스택</h4>
+                    <p>풀스택 개발 전문가 양성</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🔧</div>
+                    <h4>백엔드</h4>
+                    <p>백엔드 개발 전문가 양성</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 kt cloud TECH UP. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/start.js"></script>
+</body>
+</html>
