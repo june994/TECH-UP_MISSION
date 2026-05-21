@@ -22,10 +22,13 @@ function loadStudentData() {
         courseMessage.textContent = `kt cloud TECH UP - ${studentData.courseName}`;
     }
     
-    // Update start date
+    // Update start date (항상 최신 날짜로 강제 업데이트)
+    const CURRENT_START_DATE = '2026-06-10';
+    studentData.startDate = CURRENT_START_DATE;
+    localStorage.setItem('studentData', JSON.stringify(studentData));
     const startDate = document.getElementById('startDate');
     if (startDate) {
-        startDate.textContent = studentData.startDate;
+        startDate.textContent = CURRENT_START_DATE;
     }
     
     // Update HRD course link
