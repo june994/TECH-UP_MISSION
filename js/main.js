@@ -1,26 +1,53 @@
 // 과정별 최신 URL 및 개강일자 (항상 이 값으로 강제 업데이트)
 const LATEST_COURSE_DATA = {
     'frontend': {
+        courseName: '프론트엔드',
         hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501665&tracseTme=3&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
         startDate: '2026-06-10'
     },
     'fullstack': {
+        courseName: '풀스택',
         hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501656&tracseTme=3&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
         startDate: '2026-06-10'
     },
     'generative-ai': {
+        courseName: '생성형 AI',
         hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501671&tracseTme=3&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
         startDate: '2026-06-10'
     },
     'cloud-native': {
+        courseName: '클라우드 네이티브',
         hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501674&tracseTme=3&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
         startDate: '2026-06-10'
     },
     'product-design': {
+        courseName: '프로덕트 디자인',
         hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501679&tracseTme=3&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
         startDate: '2026-06-10'
     }
 };
+
+// 데이터 버전 - URL 변경 시 이 값을 올리면 모든 사용자의 localStorage가 자동 초기화됨
+const DATA_VERSION = '2';
+const savedVersion = localStorage.getItem('dataVersion');
+if (savedVersion !== DATA_VERSION) {
+    // 기존 이름·과정 정보 보존 후 최신 데이터로 재구성
+    const oldStr = localStorage.getItem('studentData');
+    const oldData = oldStr ? JSON.parse(oldStr) : null;
+    localStorage.clear();
+    localStorage.setItem('dataVersion', DATA_VERSION);
+    if (oldData && oldData.course && LATEST_COURSE_DATA[oldData.course]) {
+        const fresh = LATEST_COURSE_DATA[oldData.course];
+        localStorage.setItem('studentData', JSON.stringify({
+            name: oldData.name,
+            course: oldData.course,
+            courseName: fresh.courseName,
+            hrdUrl: fresh.hrdUrl,
+            startDate: fresh.startDate,
+            timestamp: new Date().toISOString()
+        }));
+    }
+}
 
 // Load student data and personalize page
 function loadStudentData() {
