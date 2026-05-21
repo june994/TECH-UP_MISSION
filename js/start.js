@@ -3,27 +3,27 @@ const courseData = {
     'frontend': {
         name: '프론트엔드',
         hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501665&tracseTme=2&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
-        startDate: '2026-03-17'
+        startDate: '2026-06-10'
     },
     'fullstack': {
         name: '풀스택',
         hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501656&tracseTme=2&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
-        startDate: '2026-03-17'
+        startDate: '2026-06-10'
     },
     'generative-ai': {
         name: '생성형 AI',
         hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501671&tracseTme=2&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
-        startDate: '2026-03-17'
+        startDate: '2026-06-10'
     },
     'cloud-native': {
         name: '클라우드 네이티브',
         hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501674&tracseTme=2&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
-        startDate: '2026-03-17'
+        startDate: '2026-06-10'
     },
     'product-design': {
         name: '프로덕트 디자인',
         hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501679&tracseTme=2&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
-        startDate: '2026-03-17'
+        startDate: '2026-06-10'
     }
 };
 
