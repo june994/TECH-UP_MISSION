@@ -1,3 +1,27 @@
+// 과정별 최신 URL 및 개강일자 (항상 이 값으로 강제 업데이트)
+const LATEST_COURSE_DATA = {
+    'frontend': {
+        hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501665&tracseTme=3&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
+        startDate: '2026-06-10'
+    },
+    'fullstack': {
+        hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501656&tracseTme=3&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
+        startDate: '2026-06-10'
+    },
+    'generative-ai': {
+        hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501671&tracseTme=3&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
+        startDate: '2026-06-10'
+    },
+    'cloud-native': {
+        hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501674&tracseTme=3&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
+        startDate: '2026-06-10'
+    },
+    'product-design': {
+        hrdUrl: 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501679&tracseTme=3&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500045581284&tracseReqstsCd=&focusId=',
+        startDate: '2026-06-10'
+    }
+};
+
 // Load student data and personalize page
 function loadStudentData() {
     const studentDataStr = localStorage.getItem('studentData');
@@ -9,7 +33,15 @@ function loadStudentData() {
     }
     
     const studentData = JSON.parse(studentDataStr);
-    
+
+    // 항상 최신 URL과 개강일자로 강제 업데이트
+    const latest = LATEST_COURSE_DATA[studentData.course];
+    if (latest) {
+        studentData.hrdUrl = latest.hrdUrl;
+        studentData.startDate = latest.startDate;
+        localStorage.setItem('studentData', JSON.stringify(studentData));
+    }
+
     // Update welcome message
     const welcomeMessage = document.getElementById('welcomeMessage');
     if (welcomeMessage) {
@@ -22,13 +54,10 @@ function loadStudentData() {
         courseMessage.textContent = `kt cloud TECH UP - ${studentData.courseName}`;
     }
     
-    // Update start date (항상 최신 날짜로 강제 업데이트)
-    const CURRENT_START_DATE = '2026-06-10';
-    studentData.startDate = CURRENT_START_DATE;
-    localStorage.setItem('studentData', JSON.stringify(studentData));
+    // Update start date
     const startDate = document.getElementById('startDate');
     if (startDate) {
-        startDate.textContent = CURRENT_START_DATE;
+        startDate.textContent = studentData.startDate;
     }
     
     // Update HRD course link
